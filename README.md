@@ -12,11 +12,12 @@ For the paper, see: https://sites.google.com/site/anayebihomepage/cs224ufinalpro
 3. Keras (I patched Keras 1.0 for this project for the additional attention layers to work, and this is located in the `/keras` directory)
 4. GloVe vectors: http://nlp.stanford.edu/projects/glove/, preferably the 840B 300-dimensional vectors from: http://nlp.stanford.edu/data/glove.840B.300d.zip
 
-# Code Explanation
+# How to Train
 
 First, install Keras from the `keras` directory, and download the GloVe to a directory of your choice. After doing so, you are ready to begin!
 
-`train_models.py` can be used to directly train any of the four models (LSTM, Bidirectional LSTM, LSTM + global attention, and LSTM + recurrent attention), by uncommenting one of the functions at the end of the file. The `glove_home` global variable must be defined to include a valid path to your GloVe vectors. The LSTM + recurrent attention is our own new attentional model which performed the best in the fine-grained sentiment task. This can be trained by uncommenting the `train_lstm_fusion` function.
+`train_models.py` can be used to directly train any of the four models (LSTM, Bidirectional LSTM, LSTM + global attention, and LSTM + recurrent attention), by uncommenting one of the functions at the end of the file. The `glove_home` global variable must be defined to include a valid path to your GloVe vectors. The LSTM + recurrent attention is our own new attentional model which performed the best in the fine-grained sentiment task. This can be trained by uncommenting the `train_lstm_fusion` function. `softattention.py`, `utils.py`, `preprocess_sentiment.py`, and `/trees` should all be in the same directory as `train_models.py`.
 
-`softattention.py`, `utils.py`, `preprocess_sentiment.py`, and `/trees` should all be in the same directory as `train_models.py`.
+# Code Explanation
+
 `softattention.py` contains all the additional Keras layers. `utils.py` (written by Chris Potts for the CS 224U course) and `preprocess_sentiment.py` (adapted from code written for Richard Socher's CS 224D course), are used to create the train and test data sets from the `/trees` directory for the sentiment analysis task as well as to aid in the creation of GloVe vector word embeddings used in `train_models.py`. The `/trees` directory is the Stanford Sentiment Treebank dataset (more information can be found in our paper or here: http://nlp.stanford.edu/sentiment/treebank.html).
