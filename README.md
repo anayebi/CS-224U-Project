@@ -9,7 +9,7 @@ For the paper, see: https://sites.google.com/site/anayebihomepage/cs224ufinalpro
 
 1. Numpy
 2. Theano
-3. Keras (I patched Keras 1.0 for this project for the additional attention layers to work, and this is located in `keras.zip`)
+3. Keras, a deep learning library for Theano and TensorFlow (I patched Keras 1.0 for this project for the additional attention layers to work, and this is located in `keras.zip`)
 4. GloVe vectors: http://nlp.stanford.edu/projects/glove/, preferably the 840B 300-dimensional vectors from: http://nlp.stanford.edu/data/glove.840B.300d.zip
 
 # How to Train
