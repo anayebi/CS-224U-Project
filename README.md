@@ -3,7 +3,7 @@ This is code I wrote for a course project for CS 224U: Natural Language Understa
 
 Project Abstract: Semantic vector spaces have long been useful for representing word tokens; however, they cannot express the meaning of longer phrases without some notion of compositionality. Recursive neural models explicitly encode syntactic properties that combine word representations into phrases; whereas recurrent neural models attain compositionality by processing word representations sequentially. A natural question that arises is whether recursive models are strictly necessary for attaining meaningful compositionality or are recurrent models sufficient? In this paper, we demonstrate that for the task of fine-grained sentiment analysis, recurrent models augmented with neural attention can outperform a recursive model. Specifically, we introduce a new type of recurrent attention mechanism that allows us to achieve 47.4% accuracy for the root-level sentiment analysis task on the Stanford Sentiment Treebank, which outperforms the Recursive Neural Tensor Network's (RNTN) previous 45.7% accuracy on the same dataset.
 
-For the paper, see: https://sites.google.com/site/anayebihomepage/cs224ufinalproject
+[Full Paper](https://anayebi.github.io/files/projects/CS_224U_Final_Project_Writeup.pdf)
 
 # Libraries Needed:
 
